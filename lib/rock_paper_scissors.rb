@@ -38,7 +38,9 @@ public def wins(p1move, p2move)
 end
 
 
+puts "please enter rock, paper or scissors"
 player1Input = gets.chomp
+puts "please enter rock, paper or scissors"
 player2Input = gets.chomp
 player1 = Player.new("snow", player1Input)
 player2 = Player.new("debbie", player2Input)
