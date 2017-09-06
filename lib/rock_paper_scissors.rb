@@ -1,3 +1,9 @@
+module Game
+  def turn
+    "enter rock, paper or scissors"
+  end
+end
+
 class Player
   attr_reader(:name, :move)
 
@@ -10,7 +16,6 @@ end
 
 
 public def wins(p1move, p2move)
-
   if(p1move === "rock" && p2move === "scissors")
     "player 1 wins"
   elsif(p1move === "scissors" && p2move === "paper")
@@ -29,8 +34,14 @@ public def wins(p1move, p2move)
     "It's a tie"
   elsif(p1move === "paper" && p2move === "paper")
     "It's a tie"
-
   end
-
-
 end
+
+
+player1Input = gets.chomp
+player2Input = gets.chomp
+player1 = Player.new("snow", player1Input)
+player2 = Player.new("debbie", player2Input)
+
+result = wins(player1.move, player2.move)
+puts result
